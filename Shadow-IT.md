@@ -1,4 +1,4 @@
-# Threat Event (Shadow IT and Unauthorized Applications)
+# Threat Event (Shadow IT)
 **Unauthorized use of remote access software involving proprietary information**
 
 ## Steps the "Bad Actor" took Create Logs and IoCs:
