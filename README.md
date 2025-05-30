@@ -25,7 +25,7 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 
 ### 1. Searched the DeviceFileEvents table for any file with “tor” in it.
 
-The user “theeRick” on DeviceName “WinRichStigInte”downloaded a tor installer that generated tor-related activity and a file called “tor-shopping-list.txt” was downloaded to the desktop. These events began at 2025-05-30T02:07:36.8356006Z.
+The user “theeRick” on DeviceName “WinRichStigInte”downloaded a tor installer that generated tor-related activity and a file called “tor-shopping-list.txt” was downloaded to the desktop. These events began at `2025-05-30T02:07:36.8356006Z`.
 
 **Query used to locate events:**
 
@@ -115,7 +115,7 @@ DeviceFileEvents
 ### 1. Tor Browser Installer Executed
 
 - **Timestamp:** `2025-05-30T02:07:00Z`
-- **Event:** The user "employee" downloaded a file named `tor-browser-windows-x86_64-portable-14.0.1.exe` to the Downloads folder.
+- **Event:** The user "theeRick" executed `tor-browser-windows-x86_64-portable-14.5.3.exe` from the Downloads folder on device "winrichstiginte".
 - **Action:** File download detected.
 - **File Path:** `C:\Users\employee\Downloads\tor-browser-windows-x86_64-portable-14.0.1.exe`
 
