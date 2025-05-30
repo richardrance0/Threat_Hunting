@@ -72,18 +72,22 @@ ProcessCommandLine
 
 ### 3. Searched the `DeviceProcessEvents` Table for TOR Browser Execution
 
-Searched for any indication that user "employee" actually opened the TOR browser. There was evidence that they did open it at `2024-11-08T22:17:21.6357935Z`. There were several other instances of `firefox.exe` (TOR) as well as `tor.exe` spawned afterwards.
+Searched the DeviceNetworkEvents table to find the RemotePort(s) that Tor is known to use. On May 30, 2025, at 11:56 AM, a user account named "theerick" on the device "winrichstiginte" launched tor.exe, initiating a connection to the remote IP 185.246.86.175 over port 9001—a known port used for Tor network traffic. This activity suggests the Tor Browser was actively used to access the anonymizing network at that time. Other sites were visited as well.
+
 
 **Query used to locate events:**
 
 ```kql
-DeviceProcessEvents  
-| where DeviceName == "threat-hunt-lab"  
-| where FileName has_any ("tor.exe", "firefox.exe", "tor-browser.exe")  
-| project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine  
+DeviceNetworkEvents
+| where DeviceName contains "WinRichStigInte"
+| where InitiatingProcessFileName in~ ("tor.exe", "firefox.exe")
+| where RemotePort in (9001, 9030, 9040, 9050, 9051, 9150)
+| project Timestamp, DeviceName, InitiatingProcessAccountName, InitiatingProcessFileName, RemoteIP, RemotePort, RemoteUrl
 | order by Timestamp desc
+
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b13707ae-8c2d-4081-a381-2b521d3a0d8f">
+![image](https://github.com/user-attachments/assets/555204d9-4f0d-441a-bac9-0ab307dd9be5)
+
 
 ---
 
