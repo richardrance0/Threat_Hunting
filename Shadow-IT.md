@@ -1,18 +1,21 @@
-# Threat Event (Unauthorized TOR Usage)
-**Unauthorized TOR Browser Installation and Use**
+# Threat Event (Shadow IT and Unauthorized Applications)
+**Unauthorized use of remote access software involving proprietary information**
 
 ## Steps the "Bad Actor" took Create Logs and IoCs:
-1. Download the TOR browser installer: https://www.torproject.org/download/
-2. Install it silently: ```tor-browser-windows-x86_64-portable-14.0.1.exe /S```
-3. Opens the TOR browser from the folder on the desktop
-4. Connect to TOR and browse a few sites. For example:
-   - **WARNING: The links to onion sites change a lot and these have changed. However if you connect to Tor and browse around normal sites a bit, the necessary logs should still be created:**
-   - Current Dread Forum: ```dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion```
-   - Dark Markets Forum: ```dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/DarkNetMarkets```
-   - Current Elysium Market: ```elysiumutkwscnmdohj23gkcyp3ebrf4iio3sngc5tvcgyfp4nqqmwad.top/login```
+1. Download TeamViewer, AnyDesk, and Dropbox from their official websites.
+2. Save the executables in the AppData folder to avoid triggering corporate software installation alerts.
+3. Add Dropbox to the Windows Registry for persistence @"HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Dropbox".
+4. To avoid detection, the following is performed:
 
-6. Create a folder on your desktop called ```tor-shopping-list.txt``` and put a few fake (illicit) items in there
-7. Delete the file.
+	a. Enable auto-start in AnyDesk and Dropbox
+
+	b. Minimize visible windows
+
+	c. Occasionally rename files to avoid suspicion
+5. Run the executables: TeamViewer.exe, AnyDesk.exe, Dropbox.exe
+6. With TeamViewer running, the employee remotey accesses their work computer from their personal machine without going through the company VPN.
+7. They browse a private link to the competitor's website.
+8. Documents from company ABC are sent to Dropbox, which reaches out to competitor company XYZ.
 
 ---
 
