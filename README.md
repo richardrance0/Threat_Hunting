@@ -46,18 +46,27 @@ DeviceFileEvents
 
 ### 2. Searched the `DeviceProcessEvents` Table
 
-Searched for any `ProcessCommandLine` that contained the string "tor-browser-windows-x86_64-portable-14.0.1.exe". Based on the logs returned, at `2024-11-08T22:16:47.4484567Z`, an employee on the "threat-hunt-lab" device ran the file `tor-browser-windows-x86_64-portable-14.0.1.exe` from their Downloads folder, using a command that triggered a silent installation.
+Searched the DeviceProcessEvents table for the process "tor-browser-windows-x86_64-portable-14.5.3.ex.  On May 29, 2025, at 9:07 PM, a user named "theerick" on the computer "winrichstiginte" initiated the execution of the Tor Browser installer (version 14.5.3) from their Downloads folder. The file, named "tor-browser-windows-x86_64-portable-14.5.3.exe," has a SHA256 hash of 3b7e78a4ccc935cfe71a0e4d41cc297d48a44e722b4a46f73b5562aed9c1d2ea, confirming its authenticity as the official release from the Tor Project .
+
+This action indicates that the user was setting up the Tor Browser, a tool designed to enhance online privacy and anonymity by routing internet traffic through a global network of servers. The portable version chosen allows the browser to run without installation, offering flexibility for use across different systems.
+
+Given the legitimate source and the verified hash, this installation appears to be a standard setup of the Tor Browser for privacy-focused browsing.
+
 
 **Query used to locate event:**
 
 ```kql
 
-DeviceProcessEvents  
-| where DeviceName == "threat-hunt-lab"  
-| where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-14.0.1.exe"  
-| project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
+DeviceProcessEvents
+| where DeviceName contains "WinRichStigInte"
+| where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-14.5.3.exe"
+| project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256,
+ProcessCommandLine
+| order by Timestamp desc
+
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b07ac4b4-9cb3-4834-8fac-9f5f29709d78">
+![image](https://github.com/user-attachments/assets/43d8818e-8aea-46dc-a8de-a7ff9a485296)
+
 
 ---
 
