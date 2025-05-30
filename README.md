@@ -46,7 +46,7 @@ DeviceFileEvents
 
 ### 2. Searched the DeviceProcessEvents table for the process "tor-browser-windows-x86_64-portable-14.5.3.ex.
 
-On May 29, 2025, at 9:07 PM, a user named "theerick" on the computer "winrichstiginte" initiated the execution of the Tor Browser installer (version 14.5.3) from their Downloads folder. The file, named "tor-browser-windows-x86_64-portable-14.5.3.exe," has a SHA256 hash of 3b7e78a4ccc935cfe71a0e4d41cc297d48a44e722b4a46f73b5562aed9c1d2ea, confirming its authenticity as the official release from the Tor Project .
+On 2025-05-30T02:07:00Z, a user named "theerick" on the computer "winrichstiginte" initiated the execution of the Tor Browser installer (version 14.5.3) from their Downloads folder. The file, named "tor-browser-windows-x86_64-portable-14.5.3.exe," has a SHA256 hash of 3b7e78a4ccc935cfe71a0e4d41cc297d48a44e722b4a46f73b5562aed9c1d2ea, confirming its authenticity as the official release from the Tor Project.
 
 This action indicates that the user was setting up the Tor Browser, a tool designed to enhance online privacy and anonymity by routing internet traffic through a global network of servers. The portable version chosen allows the browser to run without installation, offering flexibility for use across different systems.
 
@@ -72,7 +72,7 @@ ProcessCommandLine
 
 ### 3. Searched the DeviceNetworkEvents table to find the RemotePort(s) that Tor is known to use.
 
-On May 30, 2025, at 11:56 AM, a user account named "theerick" on the device "winrichstiginte" launched tor.exe, initiating a connection to the remote IP 185.246.86.175 over port 9001—a known port used for Tor network traffic. This activity suggests the Tor Browser was actively used to access the anonymizing network at that time. Other sites were visited as well.
+On 2025-05-30T16:56:00Z, a user account named "theerick" on the device "winrichstiginte" launched tor.exe, initiating a connection to the remote IP 185.246.86.175 over port 9001—a known port used for Tor network traffic. This activity suggests the Tor Browser was actively used to access the anonymizing network at that time. Other sites were visited as well.
 
 
 **Query used to locate events:**
@@ -93,7 +93,7 @@ DeviceNetworkEvents
 
 ### 4. Searched the DeviceFileEvents table for evidence of any file creation.
 
-On the evening of May 29, 2025, at 9:32 PM, the user "theeRick" remotely accessed the device "winrichstiginte" via Guacamole RDP from IP 10.0.8.4, and used Notepad to create a file named "tor-shopping-list.txt" on their desktop. 
+On the evening of 2025-05-30T02:32:00Z, the user "theeRick" remotely accessed the device "winrichstiginte" via Guacamole RDP from IP 10.0.8.4, and used Notepad to create a file named "tor-shopping-list.txt" on their desktop. 
 
 The file, only 83 bytes in size, was saved under the path C:\Users\theeRick\Desktop\. While the content is unknown, the filename and context suggest a possible preparation or reference for activities related to the Tor network.
 
@@ -112,9 +112,9 @@ DeviceFileEvents
 
 ## Chronological Event Timeline 
 
-### 1. File Download - TOR Installer
+### 1. Tor Browser Installer Executed
 
-- **Timestamp:** `2024-11-08T22:14:48.6065231Z`
+- **Timestamp:** `2025-05-30T02:07:00Z`
 - **Event:** The user "employee" downloaded a file named `tor-browser-windows-x86_64-portable-14.0.1.exe` to the Downloads folder.
 - **Action:** File download detected.
 - **File Path:** `C:\Users\employee\Downloads\tor-browser-windows-x86_64-portable-14.0.1.exe`
