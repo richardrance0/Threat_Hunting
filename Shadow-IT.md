@@ -2,20 +2,35 @@
 **Unauthorized use of remote access software involving proprietary information**
 
 ## Steps the "Bad Actor" took Create Logs and IoCs:
-1. Download TeamViewer, AnyDesk, and Dropbox from their official websites.
-2. Save the executables in the AppData folder to avoid triggering corporate software installation alerts.
-3. Add Dropbox to the Windows Registry for persistence @"HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Dropbox".
-4. To avoid detection, the following is performed:
+Steps attacker would take:
 
-	a. Enable auto-start in AnyDesk and Dropbox
+
+#1. Download TeamViewer, AnyDesk, and Dropbox from their official websites.
+-attempted download of TeamViewer, then deleted
+-downloaded with "/S" switch (silent download via command line) and installed Dropbox 
+-renamed Dropbox.exe to MyPhotos.exe
+
+
+#2. Add Dropbox to the Windows Registry for persistence @"HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Dropbox".
+-Moved Dropbox executable to registry @"HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Dropbox". String, value = "C:\Program Files\Dropbox\Client\Dropbox.exe" and restarted
+
+
+#3. Save the executables in the Temp file of the AppData folder to avoid triggering corporate software installation alerts.
+-Moved the download with the following command:  
+move "C:\Users\theeRick1\Downloads\MyPhotos.exe" "%LOCALAPPDATA%\Temp\MyPhotos.exe"
+
+
+
+#4. To avoid detection, the following is performed:
+
+	a. Enable auto-start in MyPhotos.exe
+-search menu for Startup Apps
+-check box for Dropbox
 
 	b. Minimize visible windows
 
-	c. Occasionally rename files to avoid suspicion
-5. Run the executables: TeamViewer.exe, AnyDesk.exe, Dropbox.exe
-6. With TeamViewer running, the employee remotey accesses their work computer from their personal machine without going through the company VPN.
-7. They browse a private link to the competitor's website.
-8. Documents from company ABC are sent to Dropbox, which reaches out to competitor company XYZ.
+
+5. The following files were created: TransferDocs, Proprietary. Proprietary was put into TransferDocs folder.
 
 ---
 
