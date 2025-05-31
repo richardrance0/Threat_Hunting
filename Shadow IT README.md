@@ -1,4 +1,5 @@
-![shadow IT worker](https://github.com/user-attachments/assets/b09c90a1-1910-4f87-9f49-051bf18565e3)
+![shadow IT worker resized](https://github.com/user-attachments/assets/a6a2d21f-ac5c-4661-86d2-05bd1a1818db)
+
 
 
 # Threat Hunt Report: Shadow IT
