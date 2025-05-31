@@ -1,7 +1,7 @@
 ![shadow IT worker](https://github.com/user-attachments/assets/b09c90a1-1910-4f87-9f49-051bf18565e3)
 
 
-# Threat Hunt Report: Unauthorized TOR Usage
+# Threat Hunt Report: (Shadow IT)
 - [Scenario Creation](https://github.com/richardrance0/Threat_Hunting_Scenarios/blob/main/Shadow-IT.md)
 
 ## Platforms and Languages Leveraged
